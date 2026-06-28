@@ -10,8 +10,8 @@ const products = [
   { id: 9, name: "Ruffle Scrunchie", category: "Accessories", price: "KSh 250", image: "/products/scrunchie.jpg", colors: ["White"] },
   { id: 10, name: "Fuzzy Crop Top", category: "Tops", price: "KSh 1,500", image: "/products/fuzzy-crop.jpg", colors: ["Green"] },
   { id: 11, name: "Mesh Shrug + Scrunchie", category: "Sets", price: "KSh 1,600", image: "/products/shrug-set.jpg", colors: ["Red", "White", "Grey", "Pink", "Black"] },
-  { id: 12, name: "Baby Booties", category: "Baby", price: "KSh 600", image: "/products/baby-booties.jpg", colors: ["Blue"] },
-  { id: 13, name: "Mesh Tote Bag", category: "Bags", price: "KSh 1,200", image: "/products/tote-bag.jpg", colors: ["Yellow"] },
+  { id: 12, name: "Baby Booties", category: "Baby", price: "KSh 600", image: "/products/baby-booties.png", colors: ["Blue"] },
+  { id: 13, name: "Mesh Tote Bag", category: "Bags", price: "KSh 1,200", image: "/products/tote-bag.png", colors: ["Yellow"] },
 ];
 
 const ticker = ["Handmade in Kenya ✦", "Made to Order ✦", "Custom Colours Available ✦", "DM to Order ✦", "Crochet with Love ✦"];
