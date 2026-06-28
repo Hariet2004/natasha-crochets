@@ -77,9 +77,6 @@ export default function Home() {
                   src={product.image}
                   alt={product.name}
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
-                  onError={(e) => {
-                    (e.target as HTMLImageElement).style.display = "none";
-                  }}
                 />
                 <div className="absolute inset-0 flex items-center justify-center text-[#c9a882] text-4xl opacity-30 pointer-events-none select-none">
                   ✦
