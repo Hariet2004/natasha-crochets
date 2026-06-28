@@ -5,7 +5,7 @@ const products = [
   { id: 4, name: "Flower Brooch", category: "Accessories", price: "KSh 300", image: "/products/flower-brooch.jpg", colors: ["Lavender"] },
   { id: 5, name: "Fringe Skirt Set", category: "Sets", price: "KSh 2,200", image: "/products/fringe-set.jpg", colors: ["Orange", "Black"] },
   { id: 6, name: "Mesh Halter Top", category: "Tops", price: "KSh 1,100", image: "/products/halter-top.jpg", colors: ["Green"] },
-  { id: 7, name: "Bandana Bikini Set", category: "Sets", price: "KSh 1,800", image: "/products/bandana-set.jpg", colors: ["Rust Brown"] },
+  { id: 7, name: "Bandana Top", category: "Tops", price: "KSh 1,800", image: "/products/bandana-set.jpg", colors: ["Rust Brown"] },
   { id: 8, name: "Ruffle Bralette Set", category: "Sets", price: "KSh 2,000", image: "/products/ruffle-set.jpg", colors: ["Grey", "Red"] },
   { id: 9, name: "Ruffle Scrunchie", category: "Accessories", price: "KSh 250", image: "/products/scrunchie.jpg", colors: ["White"] },
   { id: 10, name: "Fuzzy Crop Top", category: "Tops", price: "KSh 1,500", image: "/products/fuzzy-crop.jpg", colors: ["Green"] },
