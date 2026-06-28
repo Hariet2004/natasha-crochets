@@ -1,6 +1,7 @@
 import NewsletterForm from "./components/NewsletterForm";
 import ProductsSection from "./components/ProductsSection";
 import { FaWhatsapp, FaInstagram, FaPhone } from "react-icons/fa";
+import YarnDecor from "./components/YarnDecor";
 
 const products = [
   { id: 1,  name: "Crochet Hair Bow",       category: "Accessories", price: "KSh 350",   image: "/products/bow.jpg",           colors: ["Orange", "White"] },
@@ -73,7 +74,11 @@ export default function Home() {
       </nav>
 
       {/* Hero */}
-      <section className="max-w-7xl mx-auto px-6 pt-20 pb-16">
+      <section className="max-w-7xl mx-auto px-6 pt-20 pb-16 relative overflow-hidden">
+        {/* Yarn decorations */}
+        <YarnDecor className="absolute -top-10 -left-16 rotate-12 pointer-events-none" size={260} color="#E2725B" opacity={0.07} />
+        <YarnDecor className="absolute top-10 -right-10 -rotate-6 pointer-events-none" size={200} color="#886C5F" opacity={0.06} />
+        <YarnDecor className="absolute bottom-0 left-1/2 -rotate-12 pointer-events-none" size={150} color="#E2725B" opacity={0.05} />
         <div className="grid lg:grid-cols-2 gap-16 items-center">
           <div className="animate-fadeUp">
             <div className="inline-flex items-center gap-2 bg-[#E2725B]/10 text-[#E2725B] text-xs font-semibold px-4 py-2 rounded-full mb-8 tracking-widest uppercase">
@@ -145,7 +150,9 @@ export default function Home() {
       <ProductsSection />
 
       {/* How it works */}
-      <section id="process" className="bg-[#EDE5DB] py-24">
+      <section id="process" className="bg-[#EDE5DB] py-24 relative overflow-hidden">
+        <YarnDecor className="absolute -bottom-10 -right-10 rotate-45 pointer-events-none" size={220} color="#886C5F" opacity={0.08} />
+        <YarnDecor className="absolute -top-8 left-10 -rotate-12 pointer-events-none" size={160} color="#E2725B" opacity={0.06} />
         <div className="max-w-7xl mx-auto px-6">
           <div className="text-center mb-16">
             <p className="text-[#E2725B] text-xs tracking-[0.35em] uppercase font-semibold mb-3">The Process</p>
@@ -186,7 +193,9 @@ export default function Home() {
       </section>
 
       {/* About */}
-      <section id="about" className="bg-[#2C1810] text-white py-24">
+      <section id="about" className="bg-[#2C1810] text-white py-24 relative overflow-hidden">
+        <YarnDecor className="absolute top-10 right-10 rotate-12 pointer-events-none" size={240} color="#E2725B" opacity={0.06} />
+        <YarnDecor className="absolute bottom-10 left-6 -rotate-20 pointer-events-none" size={180} color="#886C5F" opacity={0.07} />
         <div className="max-w-7xl mx-auto px-6 grid lg:grid-cols-2 gap-16 items-center">
           <div className="grid grid-cols-3 gap-3">
             {[products[0], products[2], products[3], products[5], products[9], products[12]].map((p) => (
