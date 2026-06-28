@@ -1,3 +1,5 @@
+import NewsletterForm from "./components/NewsletterForm";
+
 const products = [
   { id: 1,  name: "Crochet Hair Bow",       category: "Accessories", price: "KSh 350",   image: "/products/bow.jpg",           colors: ["Orange", "White"] },
   { id: 2,  name: "Ruffle Slippers",         category: "Footwear",    price: "KSh 950",   image: "/products/slippers.jpg",      colors: ["Grey", "Pink"] },
@@ -297,16 +299,7 @@ export default function Home() {
             Get first access to<br />new drops & offers.
           </h2>
           <p className="text-white/70 text-sm mb-8">Join our community and be the first to know about new products, custom order slots, and exclusive deals.</p>
-          <form className="flex gap-3 max-w-md mx-auto" onSubmit={(e) => e.preventDefault()}>
-            <input
-              type="email"
-              placeholder="Your email address"
-              className="flex-1 bg-white/20 text-white placeholder:text-white/50 border border-white/30 rounded-full px-5 py-3 text-sm outline-none focus:bg-white/30 transition-colors"
-            />
-            <button type="submit" className="bg-white text-[#E2725B] font-bold px-6 py-3 rounded-full text-sm hover:bg-[#2C1810] hover:text-white transition-colors whitespace-nowrap">
-              Subscribe
-            </button>
-          </form>
+          <NewsletterForm />
           <p className="text-white/40 text-xs mt-4">No spam. Unsubscribe anytime.</p>
         </div>
       </section>
