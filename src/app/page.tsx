@@ -291,19 +291,6 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Newsletter */}
-      <section className="bg-[#E2725B] py-20">
-        <div className="max-w-2xl mx-auto px-6 text-center">
-          <p className="text-white/70 text-xs tracking-[0.35em] uppercase font-semibold mb-3">✦ Stay in the Loop</p>
-          <h2 className="text-4xl font-bold text-white mb-4" style={{ fontFamily: "Georgia, serif" }}>
-            Get first access to<br />new drops & offers.
-          </h2>
-          <p className="text-white/70 text-sm mb-8">Join our community and be the first to know about new products, custom order slots, and exclusive deals.</p>
-          <NewsletterForm />
-          <p className="text-white/40 text-xs mt-4">No spam. Unsubscribe anytime.</p>
-        </div>
-      </section>
-
       {/* Contact */}
       <section id="contact" className="max-w-7xl mx-auto px-6 py-24">
         <div className="text-center mb-16">
