@@ -1,54 +1,67 @@
 const products = [
-  { id: 1, name: "Crochet Hair Bow", category: "Accessories", price: "KSh 350", image: "/products/bow.jpg", colors: ["Orange", "White"] },
-  { id: 2, name: "Ruffle Slippers", category: "Footwear", price: "KSh 950", image: "/products/slippers.jpg", colors: ["Grey", "Pink"] },
-  { id: 3, name: "Crochet Rose Stem", category: "Accessories", price: "KSh 400", image: "/products/rose-stem.jpg", colors: ["Purple"] },
-  { id: 4, name: "Flower Brooch", category: "Accessories", price: "KSh 300", image: "/products/flower-brooch.jpg", colors: ["Lavender"] },
-  { id: 5, name: "Fringe Skirt Set", category: "Sets", price: "KSh 2,200", image: "/products/fringe-set.jpg", colors: ["Orange", "Black"] },
-  { id: 6, name: "Mesh Halter Top", category: "Tops", price: "KSh 1,100", image: "/products/halter-top.jpg", colors: ["Green"] },
-  { id: 7, name: "Bandana Top", category: "Tops", price: "KSh 1,800", image: "/products/bandana-set.jpg", colors: ["Rust Brown"] },
-  { id: 8, name: "Ruffle Bralette Set", category: "Sets", price: "KSh 2,000", image: "/products/ruffle-set.jpg", colors: ["Grey", "Red"] },
-  { id: 9, name: "Ruffle Scrunchie", category: "Accessories", price: "KSh 250", image: "/products/scrunchie.jpg", colors: ["White"] },
-  { id: 10, name: "Fuzzy Fringe Skirt", category: "Skirts", price: "KSh 1,500", image: "/products/fuzzy-crop.jpg", colors: ["Green"] },
-  { id: 11, name: "Mesh Shrug + Scrunchie", category: "Sets", price: "KSh 1,600", image: "/products/shrug-set.jpg", colors: ["Red", "White", "Grey", "Pink", "Black"] },
-  { id: 12, name: "Baby Booties", category: "Baby", price: "KSh 600", image: "/products/baby-booties.png", colors: ["Blue"] },
-  { id: 13, name: "Mesh Tote Bag", category: "Bags", price: "KSh 1,200", image: "/products/tote-bag.png", colors: ["Yellow"] },
+  { id: 1,  name: "Crochet Hair Bow",       category: "Accessories", price: "KSh 350",   image: "/products/bow.jpg",           colors: ["Orange", "White"] },
+  { id: 2,  name: "Ruffle Slippers",         category: "Footwear",    price: "KSh 950",   image: "/products/slippers.jpg",      colors: ["Grey", "Pink"] },
+  { id: 3,  name: "Crochet Rose Stem",       category: "Accessories", price: "KSh 400",   image: "/products/rose-stem.jpg",     colors: ["Purple"] },
+  { id: 4,  name: "Flower Brooch",           category: "Accessories", price: "KSh 300",   image: "/products/flower-brooch.jpg", colors: ["Lavender"] },
+  { id: 5,  name: "Fringe Skirt Set",        category: "Sets",        price: "KSh 2,200", image: "/products/fringe-set.jpg",    colors: ["Orange", "Black"] },
+  { id: 6,  name: "Mesh Halter Top",         category: "Tops",        price: "KSh 1,100", image: "/products/halter-top.jpg",    colors: ["Green"] },
+  { id: 7,  name: "Bandana Top",             category: "Tops",        price: "KSh 1,800", image: "/products/bandana-set.jpg",   colors: ["Rust Brown"] },
+  { id: 8,  name: "Ruffle Bralette Set",     category: "Sets",        price: "KSh 2,000", image: "/products/ruffle-set.jpg",    colors: ["Grey", "Red"] },
+  { id: 9,  name: "Ruffle Scrunchie",        category: "Accessories", price: "KSh 250",   image: "/products/scrunchie.jpg",     colors: ["White"] },
+  { id: 10, name: "Fuzzy Fringe Skirt",      category: "Skirts",      price: "KSh 1,500", image: "/products/fuzzy-crop.jpg",    colors: ["Green"] },
+  { id: 11, name: "Mesh Shrug + Scrunchie",  category: "Sets",        price: "KSh 1,600", image: "/products/shrug-set.jpg",     colors: ["Red", "White", "Grey", "Pink", "Black"] },
+  { id: 12, name: "Baby Booties",            category: "Baby",        price: "KSh 600",   image: "/products/baby-booties.png",  colors: ["Blue"] },
+  { id: 13, name: "Mesh Tote Bag",           category: "Bags",        price: "KSh 1,200", image: "/products/tote-bag.png",      colors: ["Yellow"] },
 ];
 
-const ticker = ["Handmade in Kenya ✦", "Made to Order ✦", "Custom Colours Available ✦", "DM to Order ✦", "Crochet with Love ✦"];
+const testimonials = [
+  { name: "Amara W.", text: "Absolutely obsessed with my ruffle slippers! The quality is unreal — so soft and cute. Will definitely be ordering again.", item: "Ruffle Slippers" },
+  { name: "Zara M.", text: "Got the fringe skirt set and I've worn it three times already. Everyone always asks where I got it. 10/10!", item: "Fringe Skirt Set" },
+  { name: "Cleo N.", text: "Ordered a custom shrug in black and it arrived so quickly and perfectly made. Natasha is so talented!", item: "Mesh Shrug" },
+];
+
+const process = [
+  { step: "01", title: "You Pick", desc: "Browse the collection and choose your piece. Message us your colour preference — anything is possible." },
+  { step: "02", title: "We Craft", desc: "Every piece is handmade to order with premium yarn. No mass production — just one maker, one piece, made for you." },
+  { step: "03", title: "You Slay", desc: "Your order is delivered straight to you. Styled, unique, and one of a kind." },
+];
+
+const ticker = ["Handmade in Kenya ✦", "Made to Order ✦", "Custom Colours Available ✦", "DM to Order ✦", "Premium Yarn ✦", "Crochet with Love ✦"];
 
 const whatsapp = "https://wa.me/254716515062";
 const instagram = "https://www.instagram.com/natashaunfiltered2.0?igsh=cjJ2bzQ0cW8wNnR5";
 
 export default function Home() {
   return (
-    <div className="min-h-screen bg-[#0e0a06] text-white font-sans overflow-x-hidden">
+    <div className="min-h-screen bg-[#FAF7F2] text-[#2C1810] font-sans overflow-x-hidden">
 
       {/* Ticker */}
-      <div className="bg-[#c8873a] text-[#0e0a06] text-xs font-semibold py-2 overflow-hidden">
-        <div className="flex whitespace-nowrap animate-marquee gap-0">
+      <div className="bg-[#E2725B] text-white text-[11px] font-semibold py-2.5 overflow-hidden">
+        <div className="flex whitespace-nowrap animate-marquee">
           {[...ticker, ...ticker].map((t, i) => (
-            <span key={i} className="mx-8 tracking-widest uppercase">{t}</span>
+            <span key={i} className="mx-10 tracking-[0.25em] uppercase">{t}</span>
           ))}
         </div>
       </div>
 
       {/* Nav */}
-      <nav className="sticky top-0 z-50 bg-[#0e0a06]/90 backdrop-blur-md border-b border-white/10">
+      <nav className="sticky top-0 z-50 bg-[#FAF7F2]/95 backdrop-blur-md border-b border-[#E8DDD4]">
         <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
-          <div>
-            <span className="text-lg font-bold tracking-tight text-white">Natasha</span>
-            <span className="text-lg font-bold tracking-tight text-[#c8873a]"> Crochets</span>
+          <div className="flex flex-col leading-none">
+            <span className="text-xl font-bold tracking-tight text-[#2C1810]" style={{ fontFamily: "Georgia, serif" }}>Natasha</span>
+            <span className="text-[10px] tracking-[0.3em] uppercase text-[#886C5F]">Crochets</span>
           </div>
-          <div className="hidden sm:flex gap-8 text-sm text-white/60">
-            <a href="#products" className="hover:text-white transition-colors">Shop</a>
-            <a href="#about" className="hover:text-white transition-colors">About</a>
-            <a href="#contact" className="hover:text-white transition-colors">Contact</a>
+          <div className="hidden sm:flex gap-8 text-sm text-[#886C5F] font-medium">
+            <a href="#products" className="hover:text-[#2C1810] transition-colors">Shop</a>
+            <a href="#process" className="hover:text-[#2C1810] transition-colors">How It Works</a>
+            <a href="#about" className="hover:text-[#2C1810] transition-colors">About</a>
+            <a href="#contact" className="hover:text-[#2C1810] transition-colors">Contact</a>
           </div>
           <a
             href={whatsapp}
             target="_blank"
             rel="noopener noreferrer"
-            className="bg-[#c8873a] text-[#0e0a06] text-xs font-bold px-5 py-2.5 rounded-full hover:bg-[#e09a45] transition-colors tracking-wide uppercase"
+            className="bg-[#2C1810] text-white text-xs font-bold px-6 py-2.5 rounded-full hover:bg-[#E2725B] transition-colors tracking-wide uppercase"
           >
             Order Now
           </a>
@@ -56,23 +69,24 @@ export default function Home() {
       </nav>
 
       {/* Hero */}
-      <section className="max-w-7xl mx-auto px-6 pt-24 pb-20">
-        <div className="grid lg:grid-cols-2 gap-12 items-center">
+      <section className="max-w-7xl mx-auto px-6 pt-20 pb-16">
+        <div className="grid lg:grid-cols-2 gap-16 items-center">
           <div className="animate-fadeUp">
-            <p className="text-[#c8873a] text-xs tracking-[0.4em] uppercase mb-6 font-medium">✦ Handcrafted in Kenya</p>
-            <h1 className="text-6xl sm:text-7xl font-bold leading-none tracking-tight mb-6">
-              Crochet<br />
-              <span className="text-[#c8873a]">pieces</span><br />
-              made for<br />
-              <span className="italic font-light">you.</span>
+            <div className="inline-flex items-center gap-2 bg-[#E2725B]/10 text-[#E2725B] text-xs font-semibold px-4 py-2 rounded-full mb-8 tracking-widest uppercase">
+              ✦ Handcrafted in Kenya
+            </div>
+            <h1 className="text-6xl sm:text-7xl font-bold leading-[1.05] tracking-tight mb-6 text-[#2C1810]" style={{ fontFamily: "Georgia, serif" }}>
+              Crochet pieces<br />
+              <span className="text-[#E2725B]">made</span> with<br />
+              <span className="italic font-normal">pure love.</span>
             </h1>
-            <p className="text-white/50 text-base leading-relaxed max-w-sm mb-10">
-              From cozy slippers to stunning sets — every piece is handmade with care. Custom colours always available.
+            <p className="text-[#886C5F] text-base leading-relaxed max-w-md mb-10">
+              Every stitch is intentional. Every piece is one of a kind. From bold fashion sets to delicate accessories — handmade just for you, in any colour you love.
             </p>
-            <div className="flex gap-4 flex-wrap">
+            <div className="flex gap-4 flex-wrap items-center">
               <a
                 href="#products"
-                className="bg-white text-[#0e0a06] px-8 py-3.5 rounded-full text-sm font-bold hover:bg-[#c8873a] transition-colors uppercase tracking-wide"
+                className="bg-[#2C1810] text-white px-8 py-3.5 rounded-full text-sm font-bold hover:bg-[#E2725B] transition-colors uppercase tracking-wide"
               >
                 Shop Collection
               </a>
@@ -80,188 +94,268 @@ export default function Home() {
                 href={instagram}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="border border-white/20 text-white px-8 py-3.5 rounded-full text-sm font-medium hover:border-[#c8873a] hover:text-[#c8873a] transition-colors"
+                className="text-[#2C1810] text-sm font-medium underline underline-offset-4 hover:text-[#E2725B] transition-colors"
               >
-                Instagram ↗
+                See us on Instagram ↗
               </a>
             </div>
-          </div>
-          <div className="grid grid-cols-2 gap-3">
-            {[products[4], products[6], products[10], products[12]].map((p) => (
-              <div key={p.id} className="aspect-[3/4] bg-[#1a1108] rounded-2xl overflow-hidden relative group">
-                <img src={p.image} alt={p.name} className="w-full h-full object-cover opacity-80 group-hover:opacity-100 group-hover:scale-105 transition-all duration-500" />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
-                <div className="absolute bottom-3 left-3">
-                  <p className="text-xs font-semibold text-white truncate">{p.name}</p>
-                  <p className="text-[10px] text-[#c8873a]">{p.price}</p>
-                </div>
+            {/* Trust signals */}
+            <div className="flex gap-8 mt-12 pt-8 border-t border-[#E8DDD4]">
+              <div>
+                <p className="text-2xl font-bold text-[#2C1810]" style={{ fontFamily: "Georgia, serif" }}>13+</p>
+                <p className="text-xs text-[#886C5F] uppercase tracking-wider mt-0.5">Products</p>
               </div>
-            ))}
+              <div>
+                <p className="text-2xl font-bold text-[#2C1810]" style={{ fontFamily: "Georgia, serif" }}>100%</p>
+                <p className="text-xs text-[#886C5F] uppercase tracking-wider mt-0.5">Handmade</p>
+              </div>
+              <div>
+                <p className="text-2xl font-bold text-[#2C1810]" style={{ fontFamily: "Georgia, serif" }}>Any</p>
+                <p className="text-xs text-[#886C5F] uppercase tracking-wider mt-0.5">Colour Custom</p>
+              </div>
+            </div>
+          </div>
+
+          {/* Hero product grid */}
+          <div className="grid grid-cols-2 gap-3 animate-fadeIn">
+            <div className="flex flex-col gap-3">
+              <div className="aspect-[3/4] bg-[#EDE5DB] rounded-3xl overflow-hidden">
+                <img src={products[4].image} alt={products[4].name} className="w-full h-full object-cover hover:scale-105 transition-transform duration-700" />
+              </div>
+              <div className="aspect-square bg-[#EDE5DB] rounded-3xl overflow-hidden">
+                <img src={products[8].image} alt={products[8].name} className="w-full h-full object-cover hover:scale-105 transition-transform duration-700" />
+              </div>
+            </div>
+            <div className="flex flex-col gap-3 mt-8">
+              <div className="aspect-square bg-[#EDE5DB] rounded-3xl overflow-hidden">
+                <img src={products[1].image} alt={products[1].name} className="w-full h-full object-cover hover:scale-105 transition-transform duration-700" />
+              </div>
+              <div className="aspect-[3/4] bg-[#EDE5DB] rounded-3xl overflow-hidden">
+                <img src={products[10].image} alt={products[10].name} className="w-full h-full object-cover hover:scale-105 transition-transform duration-700" />
+              </div>
+            </div>
           </div>
         </div>
       </section>
 
-      {/* Stats bar */}
-      <div className="border-y border-white/10 py-8 my-4">
-        <div className="max-w-7xl mx-auto px-6 grid grid-cols-3 gap-4 text-center">
-          <div>
-            <p className="text-3xl font-bold text-[#c8873a]">13+</p>
-            <p className="text-xs text-white/40 uppercase tracking-widest mt-1">Products</p>
-          </div>
-          <div>
-            <p className="text-3xl font-bold text-[#c8873a]">100%</p>
-            <p className="text-xs text-white/40 uppercase tracking-widest mt-1">Handmade</p>
-          </div>
-          <div>
-            <p className="text-3xl font-bold text-[#c8873a]">∞</p>
-            <p className="text-xs text-white/40 uppercase tracking-widest mt-1">Custom Options</p>
-          </div>
+      {/* Categories strip */}
+      <section className="bg-[#2C1810] py-6">
+        <div className="max-w-7xl mx-auto px-6 flex flex-wrap gap-3 justify-center">
+          {["All Pieces", "Clothing Sets", "Tops", "Skirts", "Accessories", "Footwear", "Bags", "Baby"].map((cat) => (
+            <a key={cat} href="#products" className="border border-white/20 text-white/70 text-xs px-5 py-2 rounded-full hover:bg-white hover:text-[#2C1810] transition-all font-medium tracking-wide">
+              {cat}
+            </a>
+          ))}
         </div>
-      </div>
+      </section>
 
       {/* Products */}
-      <section id="products" className="max-w-7xl mx-auto px-6 py-20">
-        <div className="flex items-end justify-between mb-12">
-          <div>
-            <p className="text-[#c8873a] text-xs tracking-[0.3em] uppercase mb-2">✦ The Collection</p>
-            <h2 className="text-4xl font-bold">All Products</h2>
-          </div>
-          <p className="text-white/40 text-sm hidden sm:block">Made to order · Custom colours available</p>
+      <section id="products" className="max-w-7xl mx-auto px-6 py-24">
+        <div className="text-center mb-16">
+          <p className="text-[#E2725B] text-xs tracking-[0.35em] uppercase font-semibold mb-3">✦ The Collection</p>
+          <h2 className="text-4xl sm:text-5xl font-bold text-[#2C1810]" style={{ fontFamily: "Georgia, serif" }}>Shop All Products</h2>
+          <p className="text-[#886C5F] mt-3 text-sm">All pieces made to order · Custom colours on request · DM to order</p>
         </div>
 
-        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4">
-          {products.map((product) => (
+        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-5">
+          {products.map((product, i) => (
             <a
               key={product.id}
               href={whatsapp}
               target="_blank"
               rel="noopener noreferrer"
               className="group block"
+              style={{ animationDelay: `${i * 60}ms` }}
             >
-              <div className="aspect-[3/4] bg-[#1a1108] rounded-2xl overflow-hidden relative mb-3">
+              <div className="aspect-[3/4] bg-[#EDE5DB] rounded-2xl overflow-hidden relative mb-3 shadow-sm">
                 <img
                   src={product.image}
                   alt={product.name}
-                  className="w-full h-full object-cover opacity-75 group-hover:opacity-100 group-hover:scale-105 transition-all duration-500"
+                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent" />
+                {/* Overlay on hover */}
+                <div className="absolute inset-0 bg-[#2C1810]/0 group-hover:bg-[#2C1810]/40 transition-all duration-300 flex items-end justify-center pb-5">
+                  <span className="bg-white text-[#2C1810] text-xs font-bold px-5 py-2.5 rounded-full opacity-0 group-hover:opacity-100 translate-y-3 group-hover:translate-y-0 transition-all duration-300 uppercase tracking-wide">
+                    Order via WhatsApp ↗
+                  </span>
+                </div>
                 <div className="absolute top-3 left-3">
-                  <span className="text-[10px] bg-[#c8873a] text-[#0e0a06] font-bold px-2.5 py-1 rounded-full uppercase tracking-wider">
+                  <span className="text-[10px] bg-[#E2725B] text-white font-bold px-2.5 py-1 rounded-full uppercase tracking-wider">
                     {product.category}
                   </span>
                 </div>
-                <div className="absolute bottom-0 left-0 right-0 p-4 translate-y-2 group-hover:translate-y-0 transition-transform duration-300">
-                  <div className="bg-white/10 backdrop-blur-sm rounded-xl p-3 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                    <p className="text-xs text-white font-bold text-center uppercase tracking-wide">Order via WhatsApp ↗</p>
-                  </div>
-                </div>
               </div>
-              <div>
-                <p className="text-sm font-semibold text-white truncate">{product.name}</p>
-                <div className="flex items-center justify-between mt-1">
-                  <span className="text-[#c8873a] text-sm font-bold">{product.price}</span>
-                  <div className="flex gap-1">
-                    {product.colors.slice(0, 3).map((c) => (
-                      <span key={c} className="text-[10px] text-white/40">{c}</span>
-                    ))}
-                    {product.colors.length > 3 && <span className="text-[10px] text-white/40">+{product.colors.length - 3}</span>}
-                  </div>
+              <p className="text-sm font-bold text-[#2C1810] truncate">{product.name}</p>
+              <div className="flex items-center justify-between mt-1">
+                <span className="text-[#E2725B] text-sm font-bold">{product.price}</span>
+                <div className="flex gap-1">
+                  {product.colors.slice(0, 2).map((c) => (
+                    <span key={c} className="text-[10px] text-[#886C5F]">{c}</span>
+                  ))}
+                  {product.colors.length > 2 && <span className="text-[10px] text-[#886C5F]">+{product.colors.length - 2} more</span>}
                 </div>
               </div>
             </a>
           ))}
         </div>
+
+        <div className="text-center mt-16">
+          <a
+            href={whatsapp}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-block border-2 border-[#2C1810] text-[#2C1810] px-10 py-4 rounded-full text-sm font-bold hover:bg-[#2C1810] hover:text-white transition-colors uppercase tracking-wide"
+          >
+            Place a Custom Order
+          </a>
+        </div>
       </section>
 
-      {/* About */}
-      <section id="about" className="bg-[#1a1108] py-24">
-        <div className="max-w-7xl mx-auto px-6 grid lg:grid-cols-2 gap-16 items-center">
-          <div>
-            <p className="text-[#c8873a] text-xs tracking-[0.3em] uppercase mb-4">✦ About Natasha</p>
-            <h2 className="text-4xl font-bold leading-tight mb-6">
-              Every stitch tells<br />
-              <span className="text-[#c8873a] italic font-light">a story.</span>
-            </h2>
-            <p className="text-white/50 leading-relaxed mb-6">
-              Hi! I&apos;m Natasha — a passionate crocheter based in Kenya. Every piece I make is crafted by hand, with love and attention to detail. Whether it&apos;s a bold fashion set or a delicate accessory, I pour creativity into everything I make.
-            </p>
-            <p className="text-white/50 leading-relaxed mb-10">
-              All pieces are made to order, so you can always request your favourite colours or a custom design. Reach out on WhatsApp or Instagram and let&apos;s create something special together.
-            </p>
-            <a
-              href={whatsapp}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 bg-[#c8873a] text-[#0e0a06] px-8 py-3.5 rounded-full text-sm font-bold hover:bg-[#e09a45] transition-colors uppercase tracking-wide"
-            >
-              Chat on WhatsApp
-            </a>
+      {/* How it works */}
+      <section id="process" className="bg-[#EDE5DB] py-24">
+        <div className="max-w-7xl mx-auto px-6">
+          <div className="text-center mb-16">
+            <p className="text-[#E2725B] text-xs tracking-[0.35em] uppercase font-semibold mb-3">✦ The Process</p>
+            <h2 className="text-4xl sm:text-5xl font-bold text-[#2C1810]" style={{ fontFamily: "Georgia, serif" }}>How It Works</h2>
           </div>
-          <div className="grid grid-cols-3 gap-3">
-            {[products[0], products[1], products[2], products[3], products[8], products[11]].map((p) => (
-              <div key={p.id} className="aspect-square bg-[#0e0a06] rounded-xl overflow-hidden">
-                <img src={p.image} alt={p.name} className="w-full h-full object-cover opacity-70 hover:opacity-100 transition-opacity duration-300" />
+          <div className="grid sm:grid-cols-3 gap-8">
+            {process.map((p) => (
+              <div key={p.step} className="bg-white rounded-3xl p-8 shadow-sm">
+                <p className="text-5xl font-bold text-[#E2725B]/20 mb-4" style={{ fontFamily: "Georgia, serif" }}>{p.step}</p>
+                <h3 className="text-xl font-bold text-[#2C1810] mb-3" style={{ fontFamily: "Georgia, serif" }}>{p.title}</h3>
+                <p className="text-[#886C5F] text-sm leading-relaxed">{p.desc}</p>
               </div>
             ))}
           </div>
         </div>
       </section>
 
+      {/* Testimonials */}
+      <section className="max-w-7xl mx-auto px-6 py-24">
+        <div className="text-center mb-16">
+          <p className="text-[#E2725B] text-xs tracking-[0.35em] uppercase font-semibold mb-3">✦ Happy Customers</p>
+          <h2 className="text-4xl sm:text-5xl font-bold text-[#2C1810]" style={{ fontFamily: "Georgia, serif" }}>What They Say</h2>
+        </div>
+        <div className="grid sm:grid-cols-3 gap-6">
+          {testimonials.map((t) => (
+            <div key={t.name} className="bg-[#EDE5DB] rounded-3xl p-8">
+              <div className="flex gap-0.5 mb-5">
+                {[1,2,3,4,5].map((s) => <span key={s} className="text-[#E2725B] text-lg">★</span>)}
+              </div>
+              <p className="text-[#2C1810] text-sm leading-relaxed mb-6 italic">&ldquo;{t.text}&rdquo;</p>
+              <div>
+                <p className="text-sm font-bold text-[#2C1810]">{t.name}</p>
+                <p className="text-xs text-[#886C5F]">Purchased: {t.item}</p>
+              </div>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      {/* About */}
+      <section id="about" className="bg-[#2C1810] text-white py-24">
+        <div className="max-w-7xl mx-auto px-6 grid lg:grid-cols-2 gap-16 items-center">
+          <div className="grid grid-cols-3 gap-3">
+            {[products[0], products[2], products[3], products[5], products[9], products[12]].map((p) => (
+              <div key={p.id} className="aspect-square rounded-2xl overflow-hidden">
+                <img src={p.image} alt={p.name} className="w-full h-full object-cover opacity-80 hover:opacity-100 hover:scale-105 transition-all duration-500" />
+              </div>
+            ))}
+          </div>
+          <div>
+            <p className="text-[#E2725B] text-xs tracking-[0.35em] uppercase font-semibold mb-4">✦ The Maker</p>
+            <h2 className="text-4xl sm:text-5xl font-bold leading-tight mb-6" style={{ fontFamily: "Georgia, serif" }}>
+              Meet Natasha.<br />
+              <span className="text-[#E2725B] italic font-normal">The hands behind</span><br />
+              every stitch.
+            </h2>
+            <p className="text-white/60 leading-relaxed mb-5 text-sm">
+              Hi! I&apos;m Natasha — a passionate crocheter based in Kenya. I started making crochet pieces because I believed handmade fashion should be accessible, beautiful, and deeply personal.
+            </p>
+            <p className="text-white/60 leading-relaxed mb-10 text-sm">
+              Every piece is made to order — no factories, no shortcuts. Just premium yarn, skilled hands, and a whole lot of love. If you can dream it, I can crochet it.
+            </p>
+            <div className="flex gap-4">
+              <a href={instagram} target="_blank" rel="noopener noreferrer"
+                className="border border-white/20 text-white px-6 py-3 rounded-full text-sm font-medium hover:border-[#E2725B] hover:text-[#E2725B] transition-colors">
+                Follow on Instagram ↗
+              </a>
+              <a href={whatsapp} target="_blank" rel="noopener noreferrer"
+                className="bg-[#E2725B] text-white px-6 py-3 rounded-full text-sm font-bold hover:bg-[#c8603a] transition-colors">
+                Order Custom Piece
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Newsletter */}
+      <section className="bg-[#E2725B] py-20">
+        <div className="max-w-2xl mx-auto px-6 text-center">
+          <p className="text-white/70 text-xs tracking-[0.35em] uppercase font-semibold mb-3">✦ Stay in the Loop</p>
+          <h2 className="text-4xl font-bold text-white mb-4" style={{ fontFamily: "Georgia, serif" }}>
+            Get first access to<br />new drops & offers.
+          </h2>
+          <p className="text-white/70 text-sm mb-8">Join our community and be the first to know about new products, custom order slots, and exclusive deals.</p>
+          <form className="flex gap-3 max-w-md mx-auto" onSubmit={(e) => e.preventDefault()}>
+            <input
+              type="email"
+              placeholder="Your email address"
+              className="flex-1 bg-white/20 text-white placeholder:text-white/50 border border-white/30 rounded-full px-5 py-3 text-sm outline-none focus:bg-white/30 transition-colors"
+            />
+            <button type="submit" className="bg-white text-[#E2725B] font-bold px-6 py-3 rounded-full text-sm hover:bg-[#2C1810] hover:text-white transition-colors whitespace-nowrap">
+              Subscribe
+            </button>
+          </form>
+          <p className="text-white/40 text-xs mt-4">No spam. Unsubscribe anytime.</p>
+        </div>
+      </section>
+
       {/* Contact */}
       <section id="contact" className="max-w-7xl mx-auto px-6 py-24">
         <div className="text-center mb-16">
-          <p className="text-[#c8873a] text-xs tracking-[0.3em] uppercase mb-4">✦ Get in Touch</p>
-          <h2 className="text-5xl font-bold mb-4">Let&apos;s create<br /><span className="text-[#c8873a] italic font-light">something beautiful.</span></h2>
-          <p className="text-white/40 max-w-md mx-auto">Place an order, request a custom piece, or just say hi. We&apos;d love to hear from you.</p>
+          <p className="text-[#E2725B] text-xs tracking-[0.35em] uppercase font-semibold mb-3">✦ Get in Touch</p>
+          <h2 className="text-4xl sm:text-5xl font-bold text-[#2C1810]" style={{ fontFamily: "Georgia, serif" }}>
+            Let&apos;s create something<br />
+            <span className="text-[#E2725B] italic font-normal">beautiful together.</span>
+          </h2>
+          <p className="text-[#886C5F] mt-4 max-w-md mx-auto text-sm">Place an order, request a custom piece, or just say hi. We&apos;d love to hear from you.</p>
         </div>
-
         <div className="grid sm:grid-cols-3 gap-4 max-w-3xl mx-auto">
-          <a
-            href={whatsapp}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="group bg-[#1a1108] border border-white/10 rounded-2xl p-6 text-center hover:border-[#c8873a] transition-colors"
-          >
-            <div className="w-12 h-12 bg-[#c8873a]/10 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:bg-[#c8873a]/20 transition-colors">
-              <span className="text-2xl">💬</span>
-            </div>
-            <p className="text-sm font-bold text-white mb-1">WhatsApp</p>
-            <p className="text-xs text-white/40">+254 716 515062</p>
-          </a>
-          <a
-            href={instagram}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="group bg-[#1a1108] border border-white/10 rounded-2xl p-6 text-center hover:border-[#c8873a] transition-colors"
-          >
-            <div className="w-12 h-12 bg-[#c8873a]/10 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:bg-[#c8873a]/20 transition-colors">
-              <span className="text-2xl">📸</span>
-            </div>
-            <p className="text-sm font-bold text-white mb-1">Instagram</p>
-            <p className="text-xs text-white/40">@natashaunfiltered2.0</p>
-          </a>
-          <a
-            href="tel:+254716515062"
-            className="group bg-[#1a1108] border border-white/10 rounded-2xl p-6 text-center hover:border-[#c8873a] transition-colors"
-          >
-            <div className="w-12 h-12 bg-[#c8873a]/10 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:bg-[#c8873a]/20 transition-colors">
-              <span className="text-2xl">📞</span>
-            </div>
-            <p className="text-sm font-bold text-white mb-1">Call / SMS</p>
-            <p className="text-xs text-white/40">+254 716 515062</p>
-          </a>
+          {[
+            { icon: "💬", label: "WhatsApp", value: "+254 716 515062", href: whatsapp },
+            { icon: "📸", label: "Instagram", value: "@natashaunfiltered2.0", href: instagram },
+            { icon: "📞", label: "Call / SMS", value: "+254 716 515062", href: "tel:+254716515062" },
+          ].map((c) => (
+            <a key={c.label} href={c.href} target="_blank" rel="noopener noreferrer"
+              className="group bg-[#FAF7F2] border-2 border-[#E8DDD4] rounded-3xl p-8 text-center hover:border-[#E2725B] hover:shadow-lg transition-all duration-300">
+              <div className="w-14 h-14 bg-[#E2725B]/10 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:bg-[#E2725B]/20 transition-colors text-2xl">
+                {c.icon}
+              </div>
+              <p className="text-sm font-bold text-[#2C1810] mb-1">{c.label}</p>
+              <p className="text-xs text-[#886C5F]">{c.value}</p>
+            </a>
+          ))}
         </div>
       </section>
 
       {/* Footer */}
-      <footer className="border-t border-white/10 py-8">
-        <div className="max-w-7xl mx-auto px-6 flex flex-col sm:flex-row items-center justify-between gap-4">
+      <footer className="bg-[#2C1810] py-10">
+        <div className="max-w-7xl mx-auto px-6 flex flex-col sm:flex-row items-center justify-between gap-6">
           <div>
-            <span className="font-bold text-white">Natasha</span>
-            <span className="font-bold text-[#c8873a]"> Crochets</span>
-            <p className="text-xs text-white/30 mt-1">Handmade in Kenya ✦</p>
+            <div>
+              <span className="text-lg font-bold text-white" style={{ fontFamily: "Georgia, serif" }}>Natasha</span>
+              <span className="text-lg font-bold text-[#E2725B]"> Crochets</span>
+            </div>
+            <p className="text-xs text-white/30 mt-1">Handmade in Kenya ✦ Made with Love</p>
           </div>
-          <p className="text-xs text-white/20">© {new Date().getFullYear()} Natasha Crochets. All rights reserved.</p>
+          <div className="flex gap-6 text-xs text-white/40">
+            <a href="#products" className="hover:text-white transition-colors">Shop</a>
+            <a href="#process" className="hover:text-white transition-colors">How It Works</a>
+            <a href="#about" className="hover:text-white transition-colors">About</a>
+            <a href={instagram} target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">Instagram</a>
+          </div>
+          <p className="text-xs text-white/20">© {new Date().getFullYear()} Natasha Crochets</p>
         </div>
       </footer>
     </div>
