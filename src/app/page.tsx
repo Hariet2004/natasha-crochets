@@ -17,18 +17,18 @@ const products = [
 ];
 
 const testimonials = [
-  { name: "Amara W.", text: "Absolutely obsessed with my ruffle slippers! The quality is unreal — so soft and cute. Will definitely be ordering again.", item: "Ruffle Slippers" },
+  { name: "Amara W.", text: "Absolutely obsessed with my ruffle slippers! The quality is unrealso soft and cute. Will definitely be ordering again.", item: "Ruffle Slippers" },
   { name: "Zara M.", text: "Got the fringe skirt set and I've worn it three times already. Everyone always asks where I got it. 10/10!", item: "Fringe Skirt Set" },
   { name: "Cleo N.", text: "Ordered a custom shrug in black and it arrived so quickly and perfectly made. Natasha is so talented!", item: "Mesh Shrug" },
 ];
 
 const process = [
-  { step: "01", title: "You Pick", desc: "Browse the collection and choose your piece. Message us your colour preference — anything is possible." },
-  { step: "02", title: "We Craft", desc: "Every piece is handmade to order with premium yarn. No mass production — just one maker, one piece, made for you." },
+  { step: "01", title: "You Pick", desc: "Browse the collection and choose your piece. Message us your colour preferenceanything is possible." },
+  { step: "02", title: "We Craft", desc: "Every piece is handmade to order with premium yarn. No mass productionjust one maker, one piece, made for you." },
   { step: "03", title: "You Slay", desc: "Your order is delivered straight to you. Styled, unique, and one of a kind." },
 ];
 
-const ticker = ["Handmade in Kenya ✦", "Made to Order ✦", "Custom Colours Available ✦", "DM to Order ✦", "Premium Yarn ✦", "Crochet with Love ✦"];
+const ticker = ["Handmade in Kenya", "Made to Order", "Custom Colours Available", "DM to Order", "Premium Yarn", "Crochet with Love"];
 
 const whatsapp = "https://wa.me/254716515062";
 const instagram = "https://www.instagram.com/natashaunfiltered2.0?igsh=cjJ2bzQ0cW8wNnR5";
@@ -75,7 +75,7 @@ export default function Home() {
         <div className="grid lg:grid-cols-2 gap-16 items-center">
           <div className="animate-fadeUp">
             <div className="inline-flex items-center gap-2 bg-[#E2725B]/10 text-[#E2725B] text-xs font-semibold px-4 py-2 rounded-full mb-8 tracking-widest uppercase">
-              ✦ Handcrafted in Kenya
+              Handcrafted in Kenya
             </div>
             <h1 className="text-6xl sm:text-7xl font-bold leading-[1.05] tracking-tight mb-6 text-[#2C1810]" style={{ fontFamily: "Georgia, serif" }}>
               Crochet pieces<br />
@@ -83,7 +83,7 @@ export default function Home() {
               <span className="italic font-normal">pure love.</span>
             </h1>
             <p className="text-[#886C5F] text-base leading-relaxed max-w-md mb-10">
-              Every stitch is intentional. Every piece is one of a kind. From bold fashion sets to delicate accessories — handmade just for you, in any colour you love.
+              Every stitch is intentional. Every piece is one of a kind. From bold fashion sets to delicate accessories, handmade just for you, in any colour you love.
             </p>
             <div className="flex gap-4 flex-wrap items-center">
               <a
@@ -154,7 +154,7 @@ export default function Home() {
       {/* Products */}
       <section id="products" className="max-w-7xl mx-auto px-6 py-24">
         <div className="text-center mb-16">
-          <p className="text-[#E2725B] text-xs tracking-[0.35em] uppercase font-semibold mb-3">✦ The Collection</p>
+          <p className="text-[#E2725B] text-xs tracking-[0.35em] uppercase font-semibold mb-3">The Collection</p>
           <h2 className="text-4xl sm:text-5xl font-bold text-[#2C1810]" style={{ fontFamily: "Georgia, serif" }}>Shop All Products</h2>
           <p className="text-[#886C5F] mt-3 text-sm">All pieces made to order · Custom colours on request · DM to order</p>
         </div>
@@ -217,7 +217,7 @@ export default function Home() {
       <section id="process" className="bg-[#EDE5DB] py-24">
         <div className="max-w-7xl mx-auto px-6">
           <div className="text-center mb-16">
-            <p className="text-[#E2725B] text-xs tracking-[0.35em] uppercase font-semibold mb-3">✦ The Process</p>
+            <p className="text-[#E2725B] text-xs tracking-[0.35em] uppercase font-semibold mb-3">The Process</p>
             <h2 className="text-4xl sm:text-5xl font-bold text-[#2C1810]" style={{ fontFamily: "Georgia, serif" }}>How It Works</h2>
           </div>
           <div className="grid sm:grid-cols-3 gap-8">
@@ -235,7 +235,7 @@ export default function Home() {
       {/* Testimonials */}
       <section className="max-w-7xl mx-auto px-6 py-24">
         <div className="text-center mb-16">
-          <p className="text-[#E2725B] text-xs tracking-[0.35em] uppercase font-semibold mb-3">✦ Happy Customers</p>
+          <p className="text-[#E2725B] text-xs tracking-[0.35em] uppercase font-semibold mb-3">Happy Customers</p>
           <h2 className="text-4xl sm:text-5xl font-bold text-[#2C1810]" style={{ fontFamily: "Georgia, serif" }}>What They Say</h2>
         </div>
         <div className="grid sm:grid-cols-3 gap-6">
@@ -265,17 +265,17 @@ export default function Home() {
             ))}
           </div>
           <div>
-            <p className="text-[#E2725B] text-xs tracking-[0.35em] uppercase font-semibold mb-4">✦ The Maker</p>
+            <p className="text-[#E2725B] text-xs tracking-[0.35em] uppercase font-semibold mb-4">The Maker</p>
             <h2 className="text-4xl sm:text-5xl font-bold leading-tight mb-6" style={{ fontFamily: "Georgia, serif" }}>
               Meet Natasha.<br />
               <span className="text-[#E2725B] italic font-normal">The hands behind</span><br />
               every stitch.
             </h2>
             <p className="text-white/60 leading-relaxed mb-5 text-sm">
-              Hi! I&apos;m Natasha — a passionate crocheter based in Kenya. I started making crochet pieces because I believed handmade fashion should be accessible, beautiful, and deeply personal.
+              Hi! I&apos;m Natashaa passionate crocheter based in Kenya. I started making crochet pieces because I believed handmade fashion should be accessible, beautiful, and deeply personal.
             </p>
             <p className="text-white/60 leading-relaxed mb-10 text-sm">
-              Every piece is made to order — no factories, no shortcuts. Just premium yarn, skilled hands, and a whole lot of love. If you can dream it, I can crochet it.
+              Every piece is made to orderno factories, no shortcuts. Just premium yarn, skilled hands, and a whole lot of love. If you can dream it, I can crochet it.
             </p>
             <div className="flex gap-4">
               <a href={instagram} target="_blank" rel="noopener noreferrer"
@@ -294,7 +294,7 @@ export default function Home() {
       {/* Contact */}
       <section id="contact" className="max-w-7xl mx-auto px-6 py-24">
         <div className="text-center mb-16">
-          <p className="text-[#E2725B] text-xs tracking-[0.35em] uppercase font-semibold mb-3">✦ Get in Touch</p>
+          <p className="text-[#E2725B] text-xs tracking-[0.35em] uppercase font-semibold mb-3">Get in Touch</p>
           <h2 className="text-4xl sm:text-5xl font-bold text-[#2C1810]" style={{ fontFamily: "Georgia, serif" }}>
             Let&apos;s create something<br />
             <span className="text-[#E2725B] italic font-normal">beautiful together.</span>
@@ -327,7 +327,7 @@ export default function Home() {
               <span className="text-lg font-bold text-white" style={{ fontFamily: "Georgia, serif" }}>Natasha</span>
               <span className="text-lg font-bold text-[#E2725B]"> Crochets</span>
             </div>
-            <p className="text-xs text-white/30 mt-1">Handmade in Kenya ✦ Made with Love</p>
+            <p className="text-xs text-white/30 mt-1">Handmade in Kenya Made with Love</p>
           </div>
           <div className="flex gap-6 text-xs text-white/40">
             <a href="#products" className="hover:text-white transition-colors">Shop</a>
