@@ -15,6 +15,7 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: "Natasha Crochets",
   description: "Handmade crochet pieces — accessories, clothing & more",
+  icons: { icon: [] },
 };
 
 export default function RootLayout({

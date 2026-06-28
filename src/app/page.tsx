@@ -1,5 +1,6 @@
 import NewsletterForm from "./components/NewsletterForm";
 import ProductsSection from "./components/ProductsSection";
+import { FaWhatsapp, FaInstagram, FaPhone } from "react-icons/fa";
 
 const products = [
   { id: 1,  name: "Crochet Hair Bow",       category: "Accessories", price: "KSh 350",   image: "/products/bow.jpg",           colors: ["Orange", "White"] },
@@ -25,7 +26,7 @@ const testimonials = [
 
 const process = [
   { step: "01", title: "You Pick", desc: "Browse the collection and choose your piece. Message us your colour preferenceanything is possible." },
-  { step: "02", title: "We Craft", desc: "Every piece is handmade to order with premium yarn. No mass productionjust one maker, one piece, made for you." },
+  { step: "02", title: "We Craft", desc: "Every piece is handmade to order with premium yarn. No mass production, just one maker, one piece, made for you." },
   { step: "03", title: "You Slay", desc: "Your order is delivered straight to you. Styled, unique, and one of a kind." },
 ];
 
@@ -205,7 +206,7 @@ export default function Home() {
               Hi! I&apos;m Natashaa passionate crocheter based in Kenya. I started making crochet pieces because I believed handmade fashion should be accessible, beautiful, and deeply personal.
             </p>
             <p className="text-white/60 leading-relaxed mb-10 text-sm">
-              Every piece is made to orderno factories, no shortcuts. Just premium yarn, skilled hands, and a whole lot of love. If you can dream it, I can crochet it.
+              Every piece is made to order. No factories, no shortcuts. Just premium yarn, skilled hands, and a whole lot of love. If you can dream it, I can crochet it.
             </p>
             <div className="flex gap-4">
               <a href={instagram} target="_blank" rel="noopener noreferrer"
@@ -233,13 +234,13 @@ export default function Home() {
         </div>
         <div className="grid sm:grid-cols-3 gap-4 max-w-3xl mx-auto">
           {[
-            { icon: "💬", label: "WhatsApp", value: "+254 716 515062", href: whatsapp },
-            { icon: "📸", label: "Instagram", value: "@natashaunfiltered2.0", href: instagram },
-            { icon: "📞", label: "Call / SMS", value: "+254 716 515062", href: "tel:+254716515062" },
+            { icon: <FaWhatsapp size={26} color="#25D366" />, label: "WhatsApp", value: "+254 716 515062", href: whatsapp },
+            { icon: <FaInstagram size={26} color="#E1306C" />, label: "Instagram", value: "@natashaunfiltered2.0", href: instagram },
+            { icon: <FaPhone size={24} color="#E2725B" />, label: "Call / SMS", value: "+254 716 515062", href: "tel:+254716515062" },
           ].map((c) => (
             <a key={c.label} href={c.href} target="_blank" rel="noopener noreferrer"
               className="group bg-[#FAF7F2] border-2 border-[#E8DDD4] rounded-3xl p-8 text-center hover:border-[#E2725B] hover:shadow-lg transition-all duration-300">
-              <div className="w-14 h-14 bg-[#E2725B]/10 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:bg-[#E2725B]/20 transition-colors text-2xl">
+              <div className="w-14 h-14 bg-[#E2725B]/10 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:bg-[#E2725B]/20 transition-colors">
                 {c.icon}
               </div>
               <p className="text-sm font-bold text-[#2C1810] mb-1">{c.label}</p>
