@@ -1,4 +1,5 @@
 import NewsletterForm from "./components/NewsletterForm";
+import ProductsSection from "./components/ProductsSection";
 
 const products = [
   { id: 1,  name: "Crochet Hair Bow",       category: "Accessories", price: "KSh 350",   image: "/products/bow.jpg",           colors: ["Orange", "White"] },
@@ -140,78 +141,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Categories strip */}
-      <section className="bg-[#2C1810] py-6">
-        <div className="max-w-7xl mx-auto px-6 flex flex-wrap gap-3 justify-center">
-          {["All Pieces", "Clothing Sets", "Tops", "Skirts", "Accessories", "Footwear", "Bags", "Baby"].map((cat) => (
-            <a key={cat} href="#products" className="border border-white/20 text-white/70 text-xs px-5 py-2 rounded-full hover:bg-white hover:text-[#2C1810] transition-all font-medium tracking-wide">
-              {cat}
-            </a>
-          ))}
-        </div>
-      </section>
-
-      {/* Products */}
-      <section id="products" className="max-w-7xl mx-auto px-6 py-24">
-        <div className="text-center mb-16">
-          <p className="text-[#E2725B] text-xs tracking-[0.35em] uppercase font-semibold mb-3">The Collection</p>
-          <h2 className="text-4xl sm:text-5xl font-bold text-[#2C1810]" style={{ fontFamily: "Georgia, serif" }}>Shop All Products</h2>
-          <p className="text-[#886C5F] mt-3 text-sm">All pieces made to order · Custom colours on request · DM to order</p>
-        </div>
-
-        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-5">
-          {products.map((product, i) => (
-            <a
-              key={product.id}
-              href={whatsapp}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="group block"
-              style={{ animationDelay: `${i * 60}ms` }}
-            >
-              <div className="aspect-[3/4] bg-[#EDE5DB] rounded-2xl overflow-hidden relative mb-3 shadow-sm">
-                <img
-                  src={product.image}
-                  alt={product.name}
-                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                />
-                {/* Overlay on hover */}
-                <div className="absolute inset-0 bg-[#2C1810]/0 group-hover:bg-[#2C1810]/40 transition-all duration-300 flex items-end justify-center pb-5">
-                  <span className="bg-white text-[#2C1810] text-xs font-bold px-5 py-2.5 rounded-full opacity-0 group-hover:opacity-100 translate-y-3 group-hover:translate-y-0 transition-all duration-300 uppercase tracking-wide">
-                    Order via WhatsApp ↗
-                  </span>
-                </div>
-                <div className="absolute top-3 left-3">
-                  <span className="text-[10px] bg-[#E2725B] text-white font-bold px-2.5 py-1 rounded-full uppercase tracking-wider">
-                    {product.category}
-                  </span>
-                </div>
-              </div>
-              <p className="text-sm font-bold text-[#2C1810] truncate">{product.name}</p>
-              <div className="flex items-center justify-between mt-1">
-                <span className="text-[#E2725B] text-sm font-bold">{product.price}</span>
-                <div className="flex gap-1">
-                  {product.colors.slice(0, 2).map((c) => (
-                    <span key={c} className="text-[10px] text-[#886C5F]">{c}</span>
-                  ))}
-                  {product.colors.length > 2 && <span className="text-[10px] text-[#886C5F]">+{product.colors.length - 2} more</span>}
-                </div>
-              </div>
-            </a>
-          ))}
-        </div>
-
-        <div className="text-center mt-16">
-          <a
-            href={whatsapp}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-block border-2 border-[#2C1810] text-[#2C1810] px-10 py-4 rounded-full text-sm font-bold hover:bg-[#2C1810] hover:text-white transition-colors uppercase tracking-wide"
-          >
-            Place a Custom Order
-          </a>
-        </div>
-      </section>
+      <ProductsSection />
 
       {/* How it works */}
       <section id="process" className="bg-[#EDE5DB] py-24">
