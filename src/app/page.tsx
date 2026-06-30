@@ -1,4 +1,3 @@
-import NewsletterForm from "./components/NewsletterForm";
 import ProductsSection from "./components/ProductsSection";
 import { FaWhatsapp, FaInstagram, FaPhone, FaEnvelope, FaTiktok } from "react-icons/fa";
 import YarnDecor from "./components/YarnDecor";
@@ -20,13 +19,13 @@ const products = [
 ];
 
 const testimonials = [
-  { name: "Amara W.", text: "Absolutely obsessed with my ruffle slippers! The quality is unrealso soft and cute. Will definitely be ordering again.", item: "Ruffle Slippers" },
+  { name: "Amara W.", text: "Absolutely obsessed with my ruffle slippers! The quality is unreal, so soft and cute. Will definitely be ordering again.", item: "Ruffle Slippers" },
   { name: "Zara M.", text: "Got the fringe skirt set and I've worn it three times already. Everyone always asks where I got it. 10/10!", item: "Fringe Skirt Set" },
   { name: "Cleo N.", text: "Ordered a custom shrug in black and it arrived so quickly and perfectly made. Natasha is so talented!", item: "Mesh Shrug" },
 ];
 
 const process = [
-  { step: "01", title: "You Pick", desc: "Browse the collection and choose your piece. Message us your colour preferenceanything is possible." },
+  { step: "01", title: "You Pick", desc: "Browse the collection and choose your piece. Message us your colour preference, anything is possible." },
   { step: "02", title: "We Craft", desc: "Every piece is handmade to order with premium yarn. No mass production, just one maker, one piece, made for you." },
   { step: "03", title: "You Slay", desc: "Your order is delivered straight to you. Styled, unique, and one of a kind." },
 ];
@@ -35,28 +34,29 @@ const ticker = ["Handmade in Kenya", "Made to Order", "Custom Colours Available"
 
 const whatsapp = "https://wa.me/254716515062";
 const instagram = "https://www.instagram.com/natashaunfiltered2.0?igsh=cjJ2bzQ0cW8wNnR5";
+const tiktok = "https://www.tiktok.com/@natash_a2.0?_r=1&_t=ZS-97bWIx3lQ7L";
 
 export default function Home() {
   return (
     <div className="min-h-screen bg-[#FAF7F2] text-[#2C1810] font-sans overflow-x-hidden">
 
       {/* Ticker */}
-      <div className="bg-[#E2725B] text-white text-[11px] font-semibold py-2.5 overflow-hidden">
+      <div className="bg-[#E2725B] text-white text-[10px] sm:text-[11px] font-semibold py-2 sm:py-2.5 overflow-hidden">
         <div className="flex whitespace-nowrap animate-marquee">
           {[...ticker, ...ticker].map((t, i) => (
-            <span key={i} className="mx-10 tracking-[0.25em] uppercase">{t}</span>
+            <span key={i} className="mx-6 sm:mx-10 tracking-[0.2em] sm:tracking-[0.25em] uppercase">{t}</span>
           ))}
         </div>
       </div>
 
       {/* Nav */}
       <nav className="sticky top-0 z-50 bg-[#FAF7F2]/95 backdrop-blur-md border-b border-[#E8DDD4]">
-        <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 py-3 sm:py-4 flex items-center justify-between">
           <div className="flex flex-col leading-none">
-            <span className="text-xl font-bold tracking-tight text-[#2C1810]" style={{ fontFamily: "Georgia, serif" }}>Natasha</span>
-            <span className="text-[10px] tracking-[0.3em] uppercase text-[#886C5F]">Crochets</span>
+            <span className="text-lg sm:text-xl font-bold tracking-tight text-[#2C1810]" style={{ fontFamily: "Georgia, serif" }}>Natasha</span>
+            <span className="text-[9px] sm:text-[10px] tracking-[0.3em] uppercase text-[#886C5F]">Crochets</span>
           </div>
-          <div className="hidden sm:flex gap-8 text-sm text-[#886C5F] font-medium">
+          <div className="hidden md:flex gap-6 lg:gap-8 text-sm text-[#886C5F] font-medium">
             <a href="#products" className="hover:text-[#2C1810] transition-colors">Shop</a>
             <a href="#process" className="hover:text-[#2C1810] transition-colors">How It Works</a>
             <a href="#about" className="hover:text-[#2C1810] transition-colors">About</a>
@@ -66,7 +66,7 @@ export default function Home() {
             href={whatsapp}
             target="_blank"
             rel="noopener noreferrer"
-            className="bg-[#2C1810] text-white text-xs font-bold px-6 py-2.5 rounded-full hover:bg-[#E2725B] transition-colors tracking-wide uppercase"
+            className="bg-[#2C1810] text-white text-[10px] sm:text-xs font-bold px-4 sm:px-6 py-2 sm:py-2.5 rounded-full hover:bg-[#E2725B] transition-colors tracking-wide uppercase"
           >
             Order Now
           </a>
@@ -74,28 +74,28 @@ export default function Home() {
       </nav>
 
       {/* Hero */}
-      <section className="max-w-7xl mx-auto px-6 pt-20 pb-16 relative overflow-hidden">
-        {/* Yarn decorations */}
-        <YarnDecor className="absolute -top-10 -left-16 rotate-12 pointer-events-none" size={260} color="#E2725B" opacity={0.07} />
-        <YarnDecor className="absolute top-10 -right-10 -rotate-6 pointer-events-none" size={200} color="#886C5F" opacity={0.06} />
-        <YarnDecor className="absolute bottom-0 left-1/2 -rotate-12 pointer-events-none" size={150} color="#E2725B" opacity={0.05} />
-        <div className="grid lg:grid-cols-2 gap-16 items-center">
-          <div className="animate-fadeUp">
-            <div className="inline-flex items-center gap-2 bg-[#E2725B]/10 text-[#E2725B] text-xs font-semibold px-4 py-2 rounded-full mb-8 tracking-widest uppercase">
+      <section className="max-w-7xl mx-auto px-4 sm:px-6 pt-12 sm:pt-20 pb-12 sm:pb-16 relative overflow-hidden">
+        <YarnDecor className="absolute -top-10 -left-16 rotate-12 pointer-events-none hidden sm:block" size={260} color="#E2725B" opacity={0.07} />
+        <YarnDecor className="absolute top-10 -right-10 -rotate-6 pointer-events-none hidden sm:block" size={200} color="#886C5F" opacity={0.06} />
+        <YarnDecor className="absolute bottom-0 left-1/2 -rotate-12 pointer-events-none hidden sm:block" size={150} color="#E2725B" opacity={0.05} />
+
+        <div className="grid lg:grid-cols-2 gap-10 lg:gap-16 items-center">
+          <div className="animate-fadeUp text-center lg:text-left">
+            <div className="inline-flex items-center gap-2 bg-[#E2725B]/10 text-[#E2725B] text-[10px] sm:text-xs font-semibold px-3 sm:px-4 py-1.5 sm:py-2 rounded-full mb-6 sm:mb-8 tracking-widest uppercase">
               Handcrafted in Kenya
             </div>
-            <h1 className="text-6xl sm:text-7xl font-bold leading-[1.05] tracking-tight mb-6 text-[#2C1810]" style={{ fontFamily: "Georgia, serif" }}>
+            <h1 className="text-4xl sm:text-6xl lg:text-7xl font-bold leading-[1.05] tracking-tight mb-4 sm:mb-6 text-[#2C1810]" style={{ fontFamily: "Georgia, serif" }}>
               Crochet pieces<br />
               <span className="text-[#E2725B]">made</span> with<br />
               <span className="italic font-normal">pure love.</span>
             </h1>
-            <p className="text-[#886C5F] text-base leading-relaxed max-w-md mb-10">
+            <p className="text-[#886C5F] text-sm sm:text-base leading-relaxed max-w-md mx-auto lg:mx-0 mb-8 sm:mb-10">
               Every stitch is intentional. Every piece is one of a kind. From bold fashion sets to delicate accessories, handmade just for you, in any colour you love.
             </p>
-            <div className="flex gap-4 flex-wrap items-center">
+            <div className="flex gap-3 sm:gap-4 flex-wrap items-center justify-center lg:justify-start">
               <a
                 href="#products"
-                className="bg-[#2C1810] text-white px-8 py-3.5 rounded-full text-sm font-bold hover:bg-[#E2725B] transition-colors uppercase tracking-wide"
+                className="bg-[#2C1810] text-white px-6 sm:px-8 py-3 sm:py-3.5 rounded-full text-xs sm:text-sm font-bold hover:bg-[#E2725B] transition-colors uppercase tracking-wide"
               >
                 Shop Collection
               </a>
@@ -103,30 +103,30 @@ export default function Home() {
                 href={instagram}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-[#2C1810] text-sm font-medium underline underline-offset-4 hover:text-[#E2725B] transition-colors"
+                className="text-[#2C1810] text-xs sm:text-sm font-medium underline underline-offset-4 hover:text-[#E2725B] transition-colors"
               >
                 See us on Instagram ↗
               </a>
             </div>
             {/* Trust signals */}
-            <div className="flex gap-8 mt-12 pt-8 border-t border-[#E8DDD4]">
+            <div className="flex gap-6 sm:gap-8 mt-10 sm:mt-12 pt-6 sm:pt-8 border-t border-[#E8DDD4] justify-center lg:justify-start">
               <div>
-                <p className="text-2xl font-bold text-[#2C1810]" style={{ fontFamily: "Georgia, serif" }}>13+</p>
-                <p className="text-xs text-[#886C5F] uppercase tracking-wider mt-0.5">Products</p>
+                <p className="text-xl sm:text-2xl font-bold text-[#2C1810]" style={{ fontFamily: "Georgia, serif" }}>13+</p>
+                <p className="text-[10px] sm:text-xs text-[#886C5F] uppercase tracking-wider mt-0.5">Products</p>
               </div>
               <div>
-                <p className="text-2xl font-bold text-[#2C1810]" style={{ fontFamily: "Georgia, serif" }}>100%</p>
-                <p className="text-xs text-[#886C5F] uppercase tracking-wider mt-0.5">Handmade</p>
+                <p className="text-xl sm:text-2xl font-bold text-[#2C1810]" style={{ fontFamily: "Georgia, serif" }}>100%</p>
+                <p className="text-[10px] sm:text-xs text-[#886C5F] uppercase tracking-wider mt-0.5">Handmade</p>
               </div>
               <div>
-                <p className="text-2xl font-bold text-[#2C1810]" style={{ fontFamily: "Georgia, serif" }}>Any</p>
-                <p className="text-xs text-[#886C5F] uppercase tracking-wider mt-0.5">Colour Custom</p>
+                <p className="text-xl sm:text-2xl font-bold text-[#2C1810]" style={{ fontFamily: "Georgia, serif" }}>Any</p>
+                <p className="text-[10px] sm:text-xs text-[#886C5F] uppercase tracking-wider mt-0.5">Colour Custom</p>
               </div>
             </div>
           </div>
 
-          {/* Hero product grid */}
-          <div className="grid grid-cols-2 gap-3 animate-fadeIn">
+          {/* Hero image grid — hidden on mobile, visible on large screens */}
+          <div className="hidden lg:grid grid-cols-2 gap-3 animate-fadeIn">
             <div className="flex flex-col gap-3">
               <div className="aspect-[3/4] bg-[#EDE5DB] rounded-3xl overflow-hidden">
                 <img src={products[4].image} alt={products[4].name} className="w-full h-full object-cover hover:scale-105 transition-transform duration-700" />
@@ -150,19 +150,19 @@ export default function Home() {
       <ProductsSection />
 
       {/* How it works */}
-      <section id="process" className="bg-[#EDE5DB] py-24 relative overflow-hidden">
-        <YarnDecor className="absolute -bottom-10 -right-10 rotate-45 pointer-events-none" size={220} color="#886C5F" opacity={0.08} />
-        <YarnDecor className="absolute -top-8 left-10 -rotate-12 pointer-events-none" size={160} color="#E2725B" opacity={0.06} />
-        <div className="max-w-7xl mx-auto px-6">
-          <div className="text-center mb-16">
+      <section id="process" className="bg-[#EDE5DB] py-16 sm:py-24 relative overflow-hidden">
+        <YarnDecor className="absolute -bottom-10 -right-10 rotate-45 pointer-events-none hidden sm:block" size={220} color="#886C5F" opacity={0.08} />
+        <YarnDecor className="absolute -top-8 left-10 -rotate-12 pointer-events-none hidden sm:block" size={160} color="#E2725B" opacity={0.06} />
+        <div className="max-w-7xl mx-auto px-4 sm:px-6">
+          <div className="text-center mb-10 sm:mb-16">
             <p className="text-[#E2725B] text-xs tracking-[0.35em] uppercase font-semibold mb-3">The Process</p>
-            <h2 className="text-4xl sm:text-5xl font-bold text-[#2C1810]" style={{ fontFamily: "Georgia, serif" }}>How It Works</h2>
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-[#2C1810]" style={{ fontFamily: "Georgia, serif" }}>How It Works</h2>
           </div>
-          <div className="grid sm:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-5 sm:gap-8">
             {process.map((p) => (
-              <div key={p.step} className="bg-white rounded-3xl p-8 shadow-sm">
-                <p className="text-5xl font-bold text-[#E2725B]/20 mb-4" style={{ fontFamily: "Georgia, serif" }}>{p.step}</p>
-                <h3 className="text-xl font-bold text-[#2C1810] mb-3" style={{ fontFamily: "Georgia, serif" }}>{p.title}</h3>
+              <div key={p.step} className="bg-white rounded-3xl p-6 sm:p-8 shadow-sm">
+                <p className="text-4xl sm:text-5xl font-bold text-[#E2725B]/20 mb-3 sm:mb-4" style={{ fontFamily: "Georgia, serif" }}>{p.step}</p>
+                <h3 className="text-lg sm:text-xl font-bold text-[#2C1810] mb-2 sm:mb-3" style={{ fontFamily: "Georgia, serif" }}>{p.title}</h3>
                 <p className="text-[#886C5F] text-sm leading-relaxed">{p.desc}</p>
               </div>
             ))}
@@ -171,18 +171,18 @@ export default function Home() {
       </section>
 
       {/* Testimonials */}
-      <section className="max-w-7xl mx-auto px-6 py-24">
-        <div className="text-center mb-16">
+      <section className="max-w-7xl mx-auto px-4 sm:px-6 py-16 sm:py-24">
+        <div className="text-center mb-10 sm:mb-16">
           <p className="text-[#E2725B] text-xs tracking-[0.35em] uppercase font-semibold mb-3">Happy Customers</p>
-          <h2 className="text-4xl sm:text-5xl font-bold text-[#2C1810]" style={{ fontFamily: "Georgia, serif" }}>What They Say</h2>
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-[#2C1810]" style={{ fontFamily: "Georgia, serif" }}>What They Say</h2>
         </div>
-        <div className="grid sm:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-3 gap-5 sm:gap-6">
           {testimonials.map((t) => (
-            <div key={t.name} className="bg-[#EDE5DB] rounded-3xl p-8">
-              <div className="flex gap-0.5 mb-5">
-                {[1,2,3,4,5].map((s) => <span key={s} className="text-[#E2725B] text-lg">★</span>)}
+            <div key={t.name} className="bg-[#EDE5DB] rounded-3xl p-6 sm:p-8">
+              <div className="flex gap-0.5 mb-4 sm:mb-5">
+                {[1,2,3,4,5].map((s) => <span key={s} className="text-[#E2725B] text-base sm:text-lg">★</span>)}
               </div>
-              <p className="text-[#2C1810] text-sm leading-relaxed mb-6 italic">&ldquo;{t.text}&rdquo;</p>
+              <p className="text-[#2C1810] text-sm leading-relaxed mb-5 sm:mb-6 italic">&ldquo;{t.text}&rdquo;</p>
               <div>
                 <p className="text-sm font-bold text-[#2C1810]">{t.name}</p>
                 <p className="text-xs text-[#886C5F]">Purchased: {t.item}</p>
@@ -193,37 +193,38 @@ export default function Home() {
       </section>
 
       {/* About */}
-      <section id="about" className="bg-[#2C1810] text-white py-24 relative overflow-hidden">
-        <YarnDecor className="absolute top-10 right-10 rotate-12 pointer-events-none" size={240} color="#E2725B" opacity={0.06} />
-        <YarnDecor className="absolute bottom-10 left-6 -rotate-20 pointer-events-none" size={180} color="#886C5F" opacity={0.07} />
-        <div className="max-w-7xl mx-auto px-6 grid lg:grid-cols-2 gap-16 items-center">
-          <div className="grid grid-cols-3 gap-3">
+      <section id="about" className="bg-[#2C1810] text-white py-16 sm:py-24 relative overflow-hidden">
+        <YarnDecor className="absolute top-10 right-10 rotate-12 pointer-events-none hidden sm:block" size={240} color="#E2725B" opacity={0.06} />
+        <YarnDecor className="absolute bottom-10 left-6 pointer-events-none hidden sm:block" size={180} color="#886C5F" opacity={0.07} />
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-center">
+          {/* Photo grid — shown below text on mobile */}
+          <div className="grid grid-cols-3 gap-2 sm:gap-3 order-2 lg:order-1">
             {[products[0], products[2], products[3], products[5], products[9], products[12]].map((p) => (
-              <div key={p.id} className="aspect-square rounded-2xl overflow-hidden">
+              <div key={p.id} className="aspect-square rounded-xl sm:rounded-2xl overflow-hidden">
                 <img src={p.image} alt={p.name} className="w-full h-full object-cover opacity-80 hover:opacity-100 hover:scale-105 transition-all duration-500" />
               </div>
             ))}
           </div>
-          <div>
-            <p className="text-[#E2725B] text-xs tracking-[0.35em] uppercase font-semibold mb-4">The Maker</p>
-            <h2 className="text-4xl sm:text-5xl font-bold leading-tight mb-6" style={{ fontFamily: "Georgia, serif" }}>
+          <div className="order-1 lg:order-2 text-center lg:text-left">
+            <p className="text-[#E2725B] text-xs tracking-[0.35em] uppercase font-semibold mb-3 sm:mb-4">The Maker</p>
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold leading-tight mb-5 sm:mb-6" style={{ fontFamily: "Georgia, serif" }}>
               Meet Natasha.<br />
               <span className="text-[#E2725B] italic font-normal">The hands behind</span><br />
               every stitch.
             </h2>
-            <p className="text-white/60 leading-relaxed mb-5 text-sm">
-              Hi! I&apos;m Natashaa passionate crocheter based in Kenya. I started making crochet pieces because I believed handmade fashion should be accessible, beautiful, and deeply personal.
+            <p className="text-white/60 leading-relaxed mb-4 sm:mb-5 text-sm">
+              Hi! I&apos;m Natasha, a passionate crocheter based in Kenya. I started making crochet pieces because I believed handmade fashion should be accessible, beautiful, and deeply personal.
             </p>
-            <p className="text-white/60 leading-relaxed mb-10 text-sm">
+            <p className="text-white/60 leading-relaxed mb-8 sm:mb-10 text-sm">
               Every piece is made to order. No factories, no shortcuts. Just premium yarn, skilled hands, and a whole lot of love. If you can dream it, I can crochet it.
             </p>
-            <div className="flex gap-4">
+            <div className="flex gap-3 sm:gap-4 flex-wrap justify-center lg:justify-start">
               <a href={instagram} target="_blank" rel="noopener noreferrer"
-                className="border border-white/20 text-white px-6 py-3 rounded-full text-sm font-medium hover:border-[#E2725B] hover:text-[#E2725B] transition-colors">
+                className="border border-white/20 text-white px-5 sm:px-6 py-2.5 sm:py-3 rounded-full text-xs sm:text-sm font-medium hover:border-[#E2725B] hover:text-[#E2725B] transition-colors">
                 Follow on Instagram ↗
               </a>
               <a href={whatsapp} target="_blank" rel="noopener noreferrer"
-                className="bg-[#E2725B] text-white px-6 py-3 rounded-full text-sm font-bold hover:bg-[#c8603a] transition-colors">
+                className="bg-[#E2725B] text-white px-5 sm:px-6 py-2.5 sm:py-3 rounded-full text-xs sm:text-sm font-bold hover:bg-[#c8603a] transition-colors">
                 Order Custom Piece
               </a>
             </div>
@@ -232,51 +233,51 @@ export default function Home() {
       </section>
 
       {/* Contact */}
-      <section id="contact" className="max-w-7xl mx-auto px-6 py-24">
-        <div className="text-center mb-16">
+      <section id="contact" className="max-w-7xl mx-auto px-4 sm:px-6 py-16 sm:py-24">
+        <div className="text-center mb-10 sm:mb-16">
           <p className="text-[#E2725B] text-xs tracking-[0.35em] uppercase font-semibold mb-3">Get in Touch</p>
-          <h2 className="text-4xl sm:text-5xl font-bold text-[#2C1810]" style={{ fontFamily: "Georgia, serif" }}>
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-[#2C1810]" style={{ fontFamily: "Georgia, serif" }}>
             Let&apos;s create something<br />
             <span className="text-[#E2725B] italic font-normal">beautiful together.</span>
           </h2>
-          <p className="text-[#886C5F] mt-4 max-w-md mx-auto text-sm">Place an order, request a custom piece, or just say hi. We&apos;d love to hear from you.</p>
+          <p className="text-[#886C5F] mt-3 sm:mt-4 max-w-md mx-auto text-sm">Place an order, request a custom piece, or just say hi. We&apos;d love to hear from you.</p>
         </div>
-        <div className="grid sm:grid-cols-3 gap-4 max-w-3xl mx-auto">
+        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-3 sm:gap-4 max-w-5xl mx-auto">
           {[
-            { icon: <FaWhatsapp size={26} color="#25D366" />, label: "WhatsApp", value: "+254 716 515062", href: whatsapp },
-            { icon: <FaInstagram size={26} color="#E1306C" />, label: "Instagram", value: "@natashaunfiltered2.0", href: instagram },
-            { icon: <FaTiktok size={24} color="#010101" />, label: "TikTok", value: "@natash_a2.0", href: "https://www.tiktok.com/@natash_a2.0?_r=1&_t=ZS-97bWIx3lQ7L" },
-            { icon: <FaEnvelope size={24} color="#E2725B" />, label: "Email", value: "wairimunatasha651@gmail.com", href: "mailto:wairimunatasha651@gmail.com" },
-            { icon: <FaPhone size={24} color="#E2725B" />, label: "Call / SMS", value: "+254 716 515062", href: "tel:+254716515062" },
+            { icon: <FaWhatsapp size={24} color="#25D366" />, label: "WhatsApp", value: "+254 716 515062", href: whatsapp },
+            { icon: <FaInstagram size={24} color="#E1306C" />, label: "Instagram", value: "@natashaunfiltered2.0", href: instagram },
+            { icon: <FaTiktok size={22} color="#010101" />, label: "TikTok", value: "@natash_a2.0", href: tiktok },
+            { icon: <FaEnvelope size={22} color="#E2725B" />, label: "Email", value: "wairimunatasha651@gmail.com", href: "mailto:wairimunatasha651@gmail.com" },
+            { icon: <FaPhone size={22} color="#E2725B" />, label: "Call / SMS", value: "+254 716 515062", href: "tel:+254716515062" },
           ].map((c) => (
             <a key={c.label} href={c.href} target="_blank" rel="noopener noreferrer"
-              className="group bg-[#FAF7F2] border-2 border-[#E8DDD4] rounded-3xl p-8 text-center hover:border-[#E2725B] hover:shadow-lg transition-all duration-300">
-              <div className="w-14 h-14 bg-[#E2725B]/10 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:bg-[#E2725B]/20 transition-colors">
+              className="group bg-[#FAF7F2] border-2 border-[#E8DDD4] rounded-2xl sm:rounded-3xl p-4 sm:p-6 text-center hover:border-[#E2725B] hover:shadow-lg transition-all duration-300">
+              <div className="w-10 h-10 sm:w-12 sm:h-12 bg-[#E2725B]/10 rounded-full flex items-center justify-center mx-auto mb-3 sm:mb-4 group-hover:bg-[#E2725B]/20 transition-colors">
                 {c.icon}
               </div>
-              <p className="text-sm font-bold text-[#2C1810] mb-1">{c.label}</p>
-              <p className="text-xs text-[#886C5F]">{c.value}</p>
+              <p className="text-xs sm:text-sm font-bold text-[#2C1810] mb-1">{c.label}</p>
+              <p className="text-[10px] sm:text-xs text-[#886C5F] break-all">{c.value}</p>
             </a>
           ))}
         </div>
       </section>
 
       {/* Footer */}
-      <footer className="bg-[#2C1810] py-10">
-        <div className="max-w-7xl mx-auto px-6 flex flex-col sm:flex-row items-center justify-between gap-6">
-          <div>
+      <footer className="bg-[#2C1810] py-8 sm:py-10">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 flex flex-col items-center gap-5 sm:gap-6 sm:flex-row sm:justify-between">
+          <div className="text-center sm:text-left">
             <div>
-              <span className="text-lg font-bold text-white" style={{ fontFamily: "Georgia, serif" }}>Natasha</span>
-              <span className="text-lg font-bold text-[#E2725B]"> Crochets</span>
+              <span className="text-base sm:text-lg font-bold text-white" style={{ fontFamily: "Georgia, serif" }}>Natasha</span>
+              <span className="text-base sm:text-lg font-bold text-[#E2725B]"> Crochets</span>
             </div>
-            <p className="text-xs text-white/30 mt-1">Handmade in Kenya Made with Love</p>
+            <p className="text-xs text-white/30 mt-1">Handmade in Kenya. Made with Love.</p>
           </div>
-          <div className="flex gap-6 text-xs text-white/40">
+          <div className="flex flex-wrap justify-center gap-4 sm:gap-6 text-xs text-white/40">
             <a href="#products" className="hover:text-white transition-colors">Shop</a>
             <a href="#process" className="hover:text-white transition-colors">How It Works</a>
             <a href="#about" className="hover:text-white transition-colors">About</a>
             <a href={instagram} target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">Instagram</a>
-            <a href="https://www.tiktok.com/@natash_a2.0?_r=1&_t=ZS-97bWIx3lQ7L" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">TikTok</a>
+            <a href={tiktok} target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">TikTok</a>
           </div>
           <p className="text-xs text-white/20">© {new Date().getFullYear()} Natasha Crochets</p>
         </div>

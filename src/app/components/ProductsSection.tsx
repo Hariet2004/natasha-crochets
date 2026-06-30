@@ -30,14 +30,14 @@ export default function ProductsSection() {
     : products.filter((p) => p.category === active);
 
   return (
-    <section id="products" className="max-w-7xl mx-auto px-6 py-24">
-      <div className="text-center mb-12">
-        <h2 className="text-4xl sm:text-5xl font-bold text-[#2C1810]" style={{ fontFamily: "Georgia, serif" }}>Shop All Products</h2>
-        <p className="text-[#886C5F] mt-3 text-sm">All pieces made to order. Custom colours on request. DM to order.</p>
+    <section id="products" className="max-w-7xl mx-auto px-4 sm:px-6 py-16 sm:py-24">
+      <div className="text-center mb-8 sm:mb-12">
+        <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-[#2C1810]" style={{ fontFamily: "Georgia, serif" }}>Shop All Products</h2>
+        <p className="text-[#886C5F] mt-2 sm:mt-3 text-sm">All pieces made to order. Custom colours on request. DM to order.</p>
       </div>
 
       {/* Category filter buttons */}
-      <div className="bg-[#2C1810] rounded-2xl py-5 px-4 flex flex-wrap gap-3 justify-center mb-12">
+      <div className="bg-[#2C1810] rounded-2xl py-4 sm:py-5 px-3 sm:px-4 flex flex-wrap gap-2 sm:gap-3 justify-center mb-8 sm:mb-12">
         {categories.map((cat) => (
           <button
             key={cat}
@@ -54,7 +54,7 @@ export default function ProductsSection() {
       </div>
 
       {/* Product grid */}
-      <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-5">
+      <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-3 sm:gap-5">
         {filtered.map((product) => (
           <a
             key={product.id}
@@ -94,12 +94,12 @@ export default function ProductsSection() {
         ))}
       </div>
 
-      <div className="text-center mt-16">
+      <div className="text-center mt-10 sm:mt-16">
         <a
           href={whatsapp}
           target="_blank"
           rel="noopener noreferrer"
-          className="inline-block border-2 border-[#2C1810] text-[#2C1810] px-10 py-4 rounded-full text-sm font-bold hover:bg-[#2C1810] hover:text-white transition-colors uppercase tracking-wide"
+          className="inline-block border-2 border-[#2C1810] text-[#2C1810] px-8 sm:px-10 py-3 sm:py-4 rounded-full text-xs sm:text-sm font-bold hover:bg-[#2C1810] hover:text-white transition-colors uppercase tracking-wide"
         >
           Place a Custom Order
         </a>
