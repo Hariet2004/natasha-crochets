@@ -1,6 +1,6 @@
 import NewsletterForm from "./components/NewsletterForm";
 import ProductsSection from "./components/ProductsSection";
-import { FaWhatsapp, FaInstagram, FaPhone } from "react-icons/fa";
+import { FaWhatsapp, FaInstagram, FaPhone, FaEnvelope, FaTiktok } from "react-icons/fa";
 import YarnDecor from "./components/YarnDecor";
 
 const products = [
@@ -245,6 +245,8 @@ export default function Home() {
           {[
             { icon: <FaWhatsapp size={26} color="#25D366" />, label: "WhatsApp", value: "+254 716 515062", href: whatsapp },
             { icon: <FaInstagram size={26} color="#E1306C" />, label: "Instagram", value: "@natashaunfiltered2.0", href: instagram },
+            { icon: <FaTiktok size={24} color="#010101" />, label: "TikTok", value: "@natash_a2.0", href: "https://www.tiktok.com/@natash_a2.0?_r=1&_t=ZS-97bWIx3lQ7L" },
+            { icon: <FaEnvelope size={24} color="#E2725B" />, label: "Email", value: "wairimunatasha651@gmail.com", href: "mailto:wairimunatasha651@gmail.com" },
             { icon: <FaPhone size={24} color="#E2725B" />, label: "Call / SMS", value: "+254 716 515062", href: "tel:+254716515062" },
           ].map((c) => (
             <a key={c.label} href={c.href} target="_blank" rel="noopener noreferrer"
@@ -274,6 +276,7 @@ export default function Home() {
             <a href="#process" className="hover:text-white transition-colors">How It Works</a>
             <a href="#about" className="hover:text-white transition-colors">About</a>
             <a href={instagram} target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">Instagram</a>
+            <a href="https://www.tiktok.com/@natash_a2.0?_r=1&_t=ZS-97bWIx3lQ7L" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">TikTok</a>
           </div>
           <p className="text-xs text-white/20">© {new Date().getFullYear()} Natasha Crochets</p>
         </div>
