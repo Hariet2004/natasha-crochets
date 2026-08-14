@@ -1,3 +1,4 @@
+import Image from "next/image";
 import ProductsSection from "./components/ProductsSection";
 import { FaWhatsapp, FaInstagram, FaPhone, FaEnvelope, FaTiktok } from "react-icons/fa";
 import YarnDecor from "./components/YarnDecor";
@@ -128,19 +129,19 @@ export default function Home() {
           {/* Hero image grid — hidden on mobile, visible on large screens */}
           <div className="hidden lg:grid grid-cols-2 gap-3 animate-fadeIn">
             <div className="flex flex-col gap-3">
-              <div className="aspect-[3/4] bg-[#EDE5DB] rounded-3xl overflow-hidden">
-                <img src={products[4].image} alt={products[4].name} className="w-full h-full object-cover hover:scale-105 transition-transform duration-700" />
+              <div className="aspect-[3/4] bg-[#EDE5DB] rounded-3xl overflow-hidden relative">
+                <Image src={products[4].image} alt={products[4].name} fill sizes="25vw" priority className="object-cover hover:scale-105 transition-transform duration-700" />
               </div>
-              <div className="aspect-square bg-[#EDE5DB] rounded-3xl overflow-hidden">
-                <img src={products[8].image} alt={products[8].name} className="w-full h-full object-cover hover:scale-105 transition-transform duration-700" />
+              <div className="aspect-square bg-[#EDE5DB] rounded-3xl overflow-hidden relative">
+                <Image src={products[8].image} alt={products[8].name} fill sizes="25vw" priority className="object-cover hover:scale-105 transition-transform duration-700" />
               </div>
             </div>
             <div className="flex flex-col gap-3 mt-8">
-              <div className="aspect-square bg-[#EDE5DB] rounded-3xl overflow-hidden">
-                <img src={products[1].image} alt={products[1].name} className="w-full h-full object-cover hover:scale-105 transition-transform duration-700" />
+              <div className="aspect-square bg-[#EDE5DB] rounded-3xl overflow-hidden relative">
+                <Image src={products[1].image} alt={products[1].name} fill sizes="25vw" priority className="object-cover hover:scale-105 transition-transform duration-700" />
               </div>
-              <div className="aspect-[3/4] bg-[#EDE5DB] rounded-3xl overflow-hidden">
-                <img src={products[10].image} alt={products[10].name} className="w-full h-full object-cover hover:scale-105 transition-transform duration-700" />
+              <div className="aspect-[3/4] bg-[#EDE5DB] rounded-3xl overflow-hidden relative">
+                <Image src={products[10].image} alt={products[10].name} fill sizes="25vw" priority className="object-cover hover:scale-105 transition-transform duration-700" />
               </div>
             </div>
           </div>
@@ -200,8 +201,8 @@ export default function Home() {
           {/* Photo grid — shown below text on mobile */}
           <div className="grid grid-cols-3 gap-2 sm:gap-3 order-2 lg:order-1">
             {[products[0], products[2], products[3], products[5], products[9], products[12]].map((p) => (
-              <div key={p.id} className="aspect-square rounded-xl sm:rounded-2xl overflow-hidden">
-                <img src={p.image} alt={p.name} className="w-full h-full object-cover opacity-80 hover:opacity-100 hover:scale-105 transition-all duration-500" />
+              <div key={p.id} className="aspect-square rounded-xl sm:rounded-2xl overflow-hidden relative">
+                <Image src={p.image} alt={p.name} fill sizes="(max-width: 640px) 33vw, (max-width: 1024px) 22vw, 15vw" className="object-cover opacity-80 hover:opacity-100 hover:scale-105 transition-all duration-500" />
               </div>
             ))}
           </div>

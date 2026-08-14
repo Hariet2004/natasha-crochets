@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import Image from "next/image";
 
 const products = [
   { id: 1,  name: "Crochet Hair Bow",       category: "Accessories", price: "KSh 350",   image: "/products/bow.jpg",           colors: ["Orange", "White"] },
@@ -64,10 +65,12 @@ export default function ProductsSection() {
             className="group block"
           >
             <div className="aspect-3/4 bg-[#EDE5DB] rounded-2xl overflow-hidden relative mb-3 shadow-sm">
-              <img
+              <Image
                 src={product.image}
                 alt={product.name}
-                className="w-full h-full object-cover scale-[1.05] group-hover:scale-[1.1] transition-transform duration-500"
+                fill
+                sizes="(max-width: 640px) 50vw, (max-width: 1024px) 33vw, 25vw"
+                className="object-cover scale-[1.05] group-hover:scale-[1.1] transition-transform duration-500"
               />
               <div className="absolute inset-0 bg-[#2C1810]/0 group-hover:bg-[#2C1810]/40 transition-all duration-300 flex items-end justify-center pb-5">
                 <span className="bg-white text-[#2C1810] text-xs font-bold px-5 py-2.5 rounded-full opacity-0 group-hover:opacity-100 translate-y-3 group-hover:translate-y-0 transition-all duration-300 uppercase tracking-wide">
