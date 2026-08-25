@@ -20,9 +20,9 @@ const products = [
 ];
 
 const testimonials = [
-  { name: "Amara W.", text: "Absolutely obsessed with my ruffle slippers! The quality is unreal, so soft and cute. Will definitely be ordering again.", item: "Ruffle Slippers" },
-  { name: "Zara M.", text: "Got the fringe skirt set and I've worn it three times already. Everyone always asks where I got it. 10/10!", item: "Fringe Skirt Set" },
-  { name: "Cleo N.", text: "Ordered a custom shrug in black and it arrived so quickly and perfectly made. Natasha is so talented!", item: "Mesh Shrug" },
+  { name: "Fauna", text: "The red ruffled hat and white shrug combo is everything I didn't know I needed. So many compliments, people actually stop me on the street to ask where I got them. Natasha really understood my vision perfectly!", item: "Ruffled Hat & White Shrug" },
+  { name: "Val", text: "I ordered the green fuzzy fringe skirt and a couple of tops and I genuinely haven't taken them off. The texture, the colour, the fit are all absolutely immaculate. Every piece looks even better in person than in the photos!", item: "Fuzzy Fringe Skirt & Tops" },
+  { name: "Hariet", text: "My top and grey shrug arrived and I was honestly blown away by the craftsmanship. The stitching is so clean and the shrug drapes beautifully. Handmade fashion at its finest and I am already planning my next order!", item: "Top & Grey Shrug" },
 ];
 
 const process = [
@@ -177,7 +177,7 @@ export default function Home() {
           <p className="text-[#E2725B] text-xs tracking-[0.35em] uppercase font-semibold mb-3">Happy Customers</p>
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-[#2C1810]" style={{ fontFamily: "Georgia, serif" }}>What They Say</h2>
         </div>
-        <div className="grid grid-cols-1 sm:grid-cols-3 gap-5 sm:gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 sm:gap-6">
           {testimonials.map((t) => (
             <div key={t.name} className="bg-[#EDE5DB] rounded-3xl p-6 sm:p-8">
               <div className="flex gap-0.5 mb-4 sm:mb-5">
@@ -280,7 +280,10 @@ export default function Home() {
             <a href={instagram} target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">Instagram</a>
             <a href={tiktok} target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">TikTok</a>
           </div>
-          <p className="text-xs text-white/20">© {new Date().getFullYear()} Natasha Crochets</p>
+          <div className="text-center sm:text-right">
+            <p className="text-xs text-white/20">© {new Date().getFullYear()} Natasha Crochets</p>
+            <p className="text-[10px] text-white/40 mt-0.5">Built by <a href="https://hariet-portfolio.vercel.app/" target="_blank" rel="noopener noreferrer" className="text-white/60 hover:text-white transition-colors">Hariet</a></p>
+          </div>
         </div>
       </footer>
     </div>
