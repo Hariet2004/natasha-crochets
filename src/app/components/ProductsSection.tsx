@@ -18,7 +18,7 @@ const products = [
   { id: 12, name: "Baby Booties",            category: "Baby",        price: "KSh 600",   image: "/products/baby-booties.png",  colors: ["Blue"] },
   { id: 13, name: "Mesh Tote Bag",           category: "Bags",        price: "KSh 800",   image: "/products/tote-bag.png",      colors: ["Yellow"] },
   { id: 14, name: "Blossom Ombré Set",       category: "Sets",        price: "KSh 7,500", image: "/products/blossom-set.png",   colors: ["Cream", "Pink"] },
-  { id: 15, name: "Terra Maxi Dress",        category: "Dresses",     price: "KSh 5,000", image: "/products/terra-dress.png",   colors: ["Rust Brown"] },
+  { id: 15, name: "Terra Maxi Dress",        category: "Dresses",     price: "KSh 5,000", image: "/products/terra-dress.png",   colors: ["Rust Brown"], imgPosition: "object-top" },
 ];
 
 const categories = ["All Pieces", "Sets", "Dresses", "Tops", "Skirts", "Accessories", "Footwear", "Bags", "Baby"];
@@ -72,7 +72,7 @@ export default function ProductsSection() {
                 alt={product.name}
                 fill
                 sizes="(max-width: 640px) 50vw, (max-width: 1024px) 33vw, 25vw"
-                className="object-cover scale-[1.05] group-hover:scale-[1.1] transition-transform duration-500"
+                className={`object-cover scale-[1.05] group-hover:scale-[1.1] transition-transform duration-500 ${product.imgPosition ?? ""}`}
               />
               <div className="absolute inset-0 bg-[#2C1810]/0 group-hover:bg-[#2C1810]/40 transition-all duration-300 flex items-end justify-center pb-5">
                 <span className="bg-white text-[#2C1810] text-xs font-bold px-5 py-2.5 rounded-full opacity-0 group-hover:opacity-100 translate-y-3 group-hover:translate-y-0 transition-all duration-300 uppercase tracking-wide">
