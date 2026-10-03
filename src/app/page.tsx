@@ -17,6 +17,8 @@ const products = [
   { id: 11, name: "Mesh Shrug + Scrunchie",  category: "Sets",        price: "KSh 1,200", image: "/products/shrug-set.jpg",     colors: ["Red", "White", "Grey", "Pink", "Black"] },
   { id: 12, name: "Baby Booties",            category: "Baby",        price: "KSh 600",   image: "/products/baby-booties.png",  colors: ["Blue"] },
   { id: 13, name: "Mesh Tote Bag",           category: "Bags",        price: "KSh 800",   image: "/products/tote-bag.png",      colors: ["Yellow"] },
+  { id: 14, name: "Blossom Ombré Set",       category: "Sets",        price: "KSh 7,500", image: "/products/blossom-set.png",   colors: ["Cream", "Pink"] },
+  { id: 15, name: "Terra Maxi Dress",        category: "Dresses",     price: "KSh 5,000", image: "/products/terra-dress.png",   colors: ["Rust Brown"] },
 ];
 
 const testimonials = [
