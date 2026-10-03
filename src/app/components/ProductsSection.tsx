@@ -18,7 +18,7 @@ const products = [
   { id: 12, name: "Baby Booties",            category: "Baby",        price: "KSh 600",   image: "/products/baby-booties.png",  colors: ["Blue"] },
   { id: 13, name: "Mesh Tote Bag",           category: "Bags",        price: "KSh 800",   image: "/products/tote-bag.png",      colors: ["Yellow"] },
   { id: 14, name: "Blossom Ombré Set",       category: "Sets",        price: "KSh 7,500", image: "/products/blossom-set.png",   colors: ["Cream", "Pink"] },
-  { id: 15, name: "Terra Maxi Dress",        category: "Dresses",     price: "KSh 5,000", image: "/products/terra-dress.png",   colors: ["Rust Brown"], imgPosition: "object-top" },
+  { id: 15, name: "Terra Maxi Dress",        category: "Dresses",     price: "KSh 6,500", image: "/products/terra-dress.png",   colors: ["Rust Brown"], imgPosition: "object-top" },
 ];
 
 const categories = ["All Pieces", "Sets", "Dresses", "Tops", "Skirts", "Accessories", "Footwear", "Bags", "Baby"];
