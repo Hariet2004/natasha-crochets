@@ -284,7 +284,7 @@ export default function Home() {
           </div>
           <div className="text-center sm:text-right">
             <p className="text-xs text-white/20">© {new Date().getFullYear()} Natasha Crochets</p>
-            <p className="text-[10px] text-white/40 mt-0.5">Built by <a href="https://hariet-portfolio.vercel.app/" target="_blank" rel="noopener noreferrer" className="text-white/60 hover:text-white transition-colors">Hariet</a></p>
+            <p className="text-[10px] text-white/40 mt-0.5">Built by <a href="https://hariet-wambui-portfolio.vercel.app/" target="_blank" rel="noopener noreferrer" className="text-white/60 hover:text-white transition-colors">HK Web Studios</a></p>
           </div>
         </div>
       </footer>
