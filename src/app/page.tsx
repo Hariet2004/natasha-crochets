@@ -114,7 +114,7 @@ export default function Home() {
             {/* Trust signals */}
             <div className="flex gap-6 sm:gap-8 mt-10 sm:mt-12 pt-6 sm:pt-8 border-t border-[#E8DDD4] justify-center lg:justify-start">
               <div>
-                <p className="text-xl sm:text-2xl font-bold text-[#2C1810]" style={{ fontFamily: "Georgia, serif" }}>13+</p>
+                <p className="text-xl sm:text-2xl font-bold text-[#2C1810]" style={{ fontFamily: "Georgia, serif" }}>16+</p>
                 <p className="text-[10px] sm:text-xs text-[#886C5F] uppercase tracking-wider mt-0.5">Products</p>
               </div>
               <div>
